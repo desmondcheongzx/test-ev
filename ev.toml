@@ -1,1 +1,33 @@
 project_id = "project-e33f9c9b2dac4bff996487bd4af363d8"
+
+[apps.desmond-app]
+id = "app-89833a892c0641f495e28d35006ae34f"
+entrypoint = "my_workflow.py"
+git_remote = "git@github.com:desmondcheongzx/test-ev.git"
+python_version = "3.13.5 (main, Jun 11 2025, 15:36:57) [Clang 15.0.0 (clang-1500.1.0.2.5)]"
+
+[apps.desmond-app-2]
+id = "app-baf27d518fd04afb96f746c59f021a54"
+entrypoint = "my_workflow.py"
+git_remote = "git@github.com:desmondcheongzx/test-ev.git"
+python_version = "3.13.5 (main, Jun 11 2025, 15:36:57) [Clang 15.0.0 (clang-1500.1.0.2.5)]"
+
+[apps.desmond-app-ds]
+id = "app-6f1df08856334ab4b623bf22b613211a"
+entrypoint = "sfd"
+git_remote = "git@github.com:desmondcheongzx/test-ev.git"
+python_version = "3.13.5 (main, Jun 11 2025, 15:36:57) [Clang 15.0.0 (clang-1500.1.0.2.5)]"
+data_source = "data-source-6c4b5fdf5edf439498ae7c855d6a1ea4"
+
+[apps.desmond-new-app]
+id = "app-7a8cc06c56c144289f254a1f95ad1eff"
+entrypoint = "test_ds:my_func"
+git_remote = "git@github.com:desmondcheongzx/test-ev.git"
+python_version = "3.13.5 (main, Jun 11 2025, 15:36:57) [Clang 15.0.0 (clang-1500.1.0.2.5)]"
+
+[apps.adsf]
+id = "app-6f77ef1198f84b1a83cd748bd9b583f8"
+entrypoint = "asdf"
+git_remote = "git@github.com:desmondcheongzx/test-ev.git"
+python_version = "3.13.5 (main, Jun 11 2025, 15:36:57) [Clang 15.0.0 (clang-1500.1.0.2.5)]"
+data_source = "data-source-6c4b5fdf5edf439498ae7c855d6a1ea4"
