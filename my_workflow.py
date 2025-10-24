@@ -43,8 +43,7 @@ def my_workflow() -> dict:
     for i in range(count):
         logger.info(f"Starting query {i+1} of {count}.")
         dest = mkdir()
-        df_with_emb = df.with_column("embedding", embed_text(df["text"]))
-        df_with_emb = df_with_emb.write_parquet(dest)
+        df.write_parquet(dest)
         results[f"run_{i + 1}"] = dest
 
     logger.info("All queries are done, sending the results back.")
