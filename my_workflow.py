@@ -50,3 +50,7 @@ def my_workflow() -> dict:
     logger.info("All queries are done, sending the results back.")
 
     return {"results": results}
+
+
+if __name__ == "__main__":
+    my_workflow()
