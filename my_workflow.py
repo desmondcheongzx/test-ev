@@ -50,6 +50,3 @@ def my_workflow() -> dict:
 
     return {"results": results}
 
-
-if __name__ == "__main__":
-    my_workflow()
