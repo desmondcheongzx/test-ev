@@ -51,6 +51,7 @@ def my_workflow() -> dict:
     return {"results": results}
 
 
-def my_func(source: daft.DataFrame) -> dict:
+def my_func(source: daft.DataFrame, count: int) -> dict:
+    logger.info("Hello from my_workflow with count={count}")
     source.show()
     return {"results": source.to_pydict()}
