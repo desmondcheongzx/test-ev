@@ -52,20 +52,5 @@ def my_workflow() -> dict:
 
 
 def my_func(source: daft.DataFrame) -> dict:
-    count = 4
-    logger.info(f"Hello from my_workflow with count={count}")
-
-    source.show()
-
-    logger.info("My job is ready, starting queries..")
-
-    results = {}
-    for i in range(count):
-        logger.info(f"Starting query {i+1} of {count}.")
-        dest = mkdir()
-        source.write_parquet(dest)
-        results[f"run_{i + 1}"] = dest
-
-    logger.info("All queries are done, sending the results back.")
-
-    return {"results": results}
+    df.show()
+    return {"results": df.to_pydict()}
