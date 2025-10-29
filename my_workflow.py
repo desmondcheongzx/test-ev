@@ -52,5 +52,5 @@ def my_workflow() -> dict:
 
 
 def my_func(source: daft.DataFrame) -> dict:
-    df.show()
-    return {"results": df.to_pydict()}
+    source.show()
+    return {"results": source.to_pydict()}
