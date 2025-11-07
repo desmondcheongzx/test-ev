@@ -2,7 +2,8 @@
 name = "test-ev"
 version = "0.1.0"
 dependencies = [
-    "daft[postgres]"
+    "daft[postgres]",
+    "psycopg[binary]"
 ]
 
 [tool.pip]
