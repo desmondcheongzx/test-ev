@@ -4,3 +4,6 @@ version = "0.1.0"
 dependencies = [
     "daft"
 ]
+
+[tool.pip]
+extra-index-url = ["https://d1p3klp2t5517h.cloudfront.net/builds/dev/5d45115cec061d45ebb3743cb59302a56a484807"]

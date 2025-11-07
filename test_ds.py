@@ -39,6 +39,3 @@ def my_func(source: daft.DataFrame) -> dict:
 
     return {"results": results}
 
-
-if __name__ == "__main__":
-    my_workflow()
