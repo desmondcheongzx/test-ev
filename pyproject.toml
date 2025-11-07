@@ -2,11 +2,8 @@
 name = "test-ev"
 version = "0.1.0"
 dependencies = [
-    "daft[postgres]",
+    "daft[postgres] >= 0.6.11",
     "psycopg[binary]",
     "sqlglot",
     "connectorx >= 0.4.4",
 ]
-
-[tool.pip]
-extra-index-url = ["https://d1p3klp2t5517h.cloudfront.net/builds/dev/5d45115cec061d45ebb3743cb59302a56a484807"]
