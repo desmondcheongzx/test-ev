@@ -5,6 +5,7 @@ dependencies = [
     "daft[postgres]",
     "psycopg[binary]",
     "sqlglot",
+    "connectorx >= 0.4.4",
 ]
 
 [tool.pip]
