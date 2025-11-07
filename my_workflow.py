@@ -11,6 +11,8 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+supabase_connection = os.environ["SUPABASE_CONNECTION"]
+
 
 def mkdir() -> str:
     desktop = os.path.join(pathlib.Path("~").expanduser(), "Desktop")
@@ -23,6 +25,8 @@ def mkdir() -> str:
 def my_workflow() -> dict:
     count = 4
     logger.info(f"Hello from my_workflow with count={count}")
+    catalog = daft.Catalog.from_postgres(supabase_connection)
+    catalog.get_table("resume_embeddings").read().show()
 
     df = daft.from_pydict(
         {
