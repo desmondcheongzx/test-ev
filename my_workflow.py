@@ -11,9 +11,6 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-supabase_connection = os.environ["SUPABASE_CONNECTION"]
-
-
 def mkdir() -> str:
     desktop = os.path.join(pathlib.Path("~").expanduser(), "Desktop")
     timestamp = str(int(time.time()))
