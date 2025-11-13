@@ -59,7 +59,7 @@ def my_func(source: daft.DataFrame, count: int) -> dict:
 
 
 def use_db(source: daft.DataFrame, cat: daft.Catalog) -> dict:
-    table = cat.create_table_if_not_exists("demo_table")
+    table = cat.create_table_if_not_exists("demo_table", source.schema())
     table.append(source)
     return {"num_rows": source.num_rows()}
 
