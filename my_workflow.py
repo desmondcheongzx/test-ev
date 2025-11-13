@@ -56,3 +56,10 @@ def my_func(source: daft.DataFrame, count: int) -> dict:
     print(f"Hello from my_workflow with count={count}")
     source.show()
     return {"results": source.to_pydict()}
+
+
+def use_db(source: daft.DataFrame, cat: daft.Catalog) -> dict:
+    table = cat.create_table_if_not_exists("demo_table")
+    table.append(source)
+    return {"num_rows": source.num_rows()}
+
