@@ -63,3 +63,7 @@ def use_db(source: daft.DataFrame, cat: daft.Catalog) -> dict:
     table.append(source)
     return {"num_rows": source.count_rows()}
 
+
+def read_sammy(source: daft.DataFrame) -> dict:
+    return {"results": source.limit(10).to_pydict()}
+
