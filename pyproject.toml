@@ -12,4 +12,5 @@ dependencies = [
     "python-dotenv>=1.2.1",
     "torch",
     "transformers>=4.57.1",
+    "sentence_transformers",
 ]
