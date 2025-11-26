@@ -11,6 +11,44 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+
+def test_echo_embeddings() -> dict:
+    """Test the echo provider for embeddings.
+
+    This function creates text embeddings using whatever provider is configured
+    via DAFT_PROVIDER environment variable. When DAFT_PROVIDER=echo, it will
+    use the deterministic echo provider that doesn't require any external APIs.
+    """
+    logger.info("Starting echo embeddings test...")
+
+    df = daft.from_pydict({
+        "text": [
+            "Hello, world!",
+            "This is a test of the echo embedding provider.",
+            "Embeddings should be deterministic - same input gives same output.",
+            "No GPU or API calls required!",
+        ]
+    })
+
+    logger.info("Creating embeddings...")
+    df_with_embeddings = df.with_column(
+        "embedding",
+        embed_text(df["text"], dimensions=512)
+    )
+
+    # Collect results
+    result = df_with_embeddings.to_pydict()
+
+    logger.info(f"Generated {len(result['embedding'])} embeddings")
+    logger.info(f"Embedding dimensions: {len(result['embedding'][0]) if result['embedding'] else 'N/A'}")
+
+    return {
+        "num_embeddings": len(result["embedding"]),
+        "embedding_dim": len(result["embedding"][0]) if result["embedding"] else 0,
+        "texts": result["text"],
+    }
+
+
 def mkdir() -> str:
     desktop = os.path.join(pathlib.Path("~").expanduser(), "Desktop")
     timestamp = str(int(time.time()))
