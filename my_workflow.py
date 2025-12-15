@@ -108,3 +108,12 @@ def read_sammy(source: daft.DataFrame, cat: daft.Catalog) -> dict:
     table.append(output)
     return {"num_rows": source.count_rows()}
 
+
+class CustomResult:
+    def __repr__(self) -> str:
+        return "CustomResult()"
+
+
+def unserializable_result() -> CustomResult:
+    result = CustomResult()
+    return result
