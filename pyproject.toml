@@ -2,7 +2,7 @@
 name = "test-ev"
 version = "0.1.0"
 dependencies = [
-    "daft[openai,turbopuffer]==0.6.14",
+    "daft[openai,turbopuffer]==0.7.0",
     "psycopg[binary]",
     "sqlglot",
     "connectorx >= 0.4.4",
