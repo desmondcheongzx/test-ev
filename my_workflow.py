@@ -33,7 +33,11 @@ def test_echo_embeddings() -> dict:
     logger.info("Creating embeddings...")
     df_with_embeddings = df.with_column(
         "embedding",
-        embed_text(df["text"], dimensions=512)
+        embed_text(
+            df["text"],
+            provider="transformers",
+            model="sentence-transformers/all-MiniLM-L6-v2",
+        )
     )
 
     # Collect results
