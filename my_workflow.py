@@ -37,16 +37,7 @@ def test_echo_embeddings() -> dict:
     )
 
     # Collect results
-    result = df_with_embeddings.to_pydict()
-
-    logger.info(f"Generated {len(result['embedding'])} embeddings")
-    logger.info(f"Embedding dimensions: {len(result['embedding'][0]) if result['embedding'] else 'N/A'}")
-
-    return {
-        "num_embeddings": len(result["embedding"]),
-        "embedding_dim": len(result["embedding"][0]) if result["embedding"] else 0,
-        "texts": result["text"],
-    }
+    return df_with_embeddings
 
 
 def mkdir() -> str:
