@@ -44,6 +44,11 @@ def test_echo_embeddings() -> dict:
     return df_with_embeddings
 
 
+def hello_world():
+    logger.info("Creating embeddings...")
+    return
+
+
 def mkdir() -> str:
     desktop = os.path.join(pathlib.Path("~").expanduser(), "Desktop")
     timestamp = str(int(time.time()))
