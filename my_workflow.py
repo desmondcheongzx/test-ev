@@ -117,3 +117,16 @@ class CustomResult:
 def unserializable_result() -> CustomResult:
     result = CustomResult()
     return result
+
+
+def main(band: str):
+    logger.info(f"bandname: {band}")
+    return "hello world"
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Filter band members by band name")
+    parser.add_argument("band", type=str, help="Name of the band to filter")
+    args = parser.parse_args()
+
+    main(args.band)
