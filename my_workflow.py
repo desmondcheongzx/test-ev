@@ -47,7 +47,7 @@ def test_echo_embeddings() -> dict:
 
 
 def hello_world():
-    print("Reticulating splines...")
+    print("First, discombobulate...")
     return
 
 
