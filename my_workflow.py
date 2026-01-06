@@ -47,7 +47,7 @@ def test_echo_embeddings() -> dict:
 
 
 def hello_world():
-    logger.info("Reticulating splines...")
+    print("Reticulating splines...")
     return
 
 
